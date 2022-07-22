@@ -1,4 +1,7 @@
 
+# configure GPG
+export GPG_TTY=$(tty)
+
 # configure jenv
 export PATH="${HOME}/.jenv/bin:${PATH}"
 eval "$(jenv init -)"
