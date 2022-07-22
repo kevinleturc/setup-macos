@@ -18,10 +18,12 @@ curl -fsSL https://raw.githubusercontent.com/kevinleturc/setup-macos/main/Brewfi
 # Download .zshrc
 echo 'Download .zshrc'
 curl -fsSL https://raw.githubusercontent.com/kevinleturc/setup-macos/main/zshrc > ~/.zshrc
+source ~/.zshrc
 
 echo 'Correct permission for insecure directories for completion'
 chmod -R go-w "$(brew --prefix)/share"
 
 echo 'Configure tools and home'
 mkdir ~/.m2 ~/.nvm
+jenv enable-plugin export
 
