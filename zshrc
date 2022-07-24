@@ -1,4 +1,7 @@
 
+# configure direnv
+eval "$(direnv hook zsh)"
+
 # configure GPG
 export GPG_TTY=$(tty)
 

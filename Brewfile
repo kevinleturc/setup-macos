@@ -2,6 +2,7 @@
 tap "mdogan/zulu"
 
 brew "bash-completion"
+brew "direnv"
 brew "dive"
 brew "git"
 brew "git-lfs"
