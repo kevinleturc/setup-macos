@@ -1,4 +1,7 @@
 
+# configure allowed open files
+ulimit -n 10240
+
 # configure direnv
 eval "$(direnv hook zsh)"
 
