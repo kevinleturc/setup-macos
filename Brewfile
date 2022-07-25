@@ -1,4 +1,5 @@
 
+tap "homebrew/cask-fonts"
 tap "mdogan/zulu"
 
 brew "bash-completion"
@@ -37,6 +38,8 @@ cask "visual-studio-code"
 cask "mdogan/zulu/zulu-jdk8"
 cask "mdogan/zulu/zulu-jdk11"
 cask "mdogan/zulu/zulu-jdk17"
+
+cask "font-hack-nerd-font"
 
 # nuxeo third parties runtime
 brew "ccextractor"
