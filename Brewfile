@@ -32,6 +32,7 @@ cask "intellij-idea"
 cask "iterm2"
 cask "libreoffice"
 cask "slack"
+cask "visual-studio-code"
 
 cask "mdogan/zulu/zulu-jdk8"
 cask "mdogan/zulu/zulu-jdk11"
