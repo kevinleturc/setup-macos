@@ -12,6 +12,9 @@ export GPG_TTY=$(tty)
 export PATH="${HOME}/.jenv/bin:${PATH}"
 eval "$(jenv init -)"
 
+# configure java options
+export JAVA_TOOL_OPTIONS=-XX:-MaxFDLimit
+
 if type brew &>/dev/null; then
   # configure maven (while waiting for maven 4)
   mvn() {
