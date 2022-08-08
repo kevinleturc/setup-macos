@@ -2,21 +2,8 @@
 # configure allowed open files
 ulimit -n 10240
 
-# configure direnv
-eval "$(direnv hook zsh)"
-
 # configure GPG
 export GPG_TTY=$(tty)
-
-# configure jenv
-export PATH="${HOME}/.jenv/bin:${PATH}"
-eval "$(jenv init -)"
-
-# configure java options
-export JAVA_TOOL_OPTIONS=-XX:-MaxFDLimit
-
-# configure kubectl completion
-source <(kubectl completion zsh)
 
 if type brew &>/dev/null; then
   # configure maven (while waiting for maven 4)
@@ -30,6 +17,19 @@ if type brew &>/dev/null; then
 
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
+
+  # configure direnv
+  eval "$(direnv hook zsh)"
+
+  # configure jenv
+  export PATH="${HOME}/.jenv/bin:${PATH}"
+  eval "$(jenv init -)"
+
+  # configure java options
+  export JAVA_TOOL_OPTIONS=-XX:-MaxFDLimit
+
+  # configure kubectl completion
+  source <(kubectl completion zsh)
 
   # configure brew completions
   autoload -Uz compinit
