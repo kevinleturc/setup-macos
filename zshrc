@@ -15,6 +15,9 @@ eval "$(jenv init -)"
 # configure java options
 export JAVA_TOOL_OPTIONS=-XX:-MaxFDLimit
 
+# configure kubectl completion
+source <(kubectl completion zsh)
+
 if type brew &>/dev/null; then
   # configure maven (while waiting for maven 4)
   mvn() {
