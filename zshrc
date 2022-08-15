@@ -28,15 +28,15 @@ if type brew &>/dev/null; then
   # configure java options
   export JAVA_TOOL_OPTIONS=-XX:-MaxFDLimit
 
-  # configure kubectl completion
-  source <(kubectl completion zsh)
-
   # configure brew completions
   autoload -Uz compinit
   compinit
 
+  # configure kubectl completion
+  source <(kubectl completion zsh)
+
   # configure prompt spaceship
-  autoload -U promtinit; promptinit
+  autoload -Uz promptinit; promptinit
   prompt spaceship
 fi
 
