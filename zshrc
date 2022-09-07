@@ -36,7 +36,6 @@ if type brew &>/dev/null; then
   source <(kubectl completion zsh)
 
   # configure prompt spaceship
-  autoload -Uz promptinit; promptinit
-  prompt spaceship
+  source $(brew --prefix)/opt/spaceship/spaceship.zsh
 fi
 
